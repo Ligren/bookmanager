@@ -1,4 +1,4 @@
 # bookmanager
 Web Application
 use
-Spring MVC+Hybernate+MySql
+Spring MVC+Hibernate+MySql
