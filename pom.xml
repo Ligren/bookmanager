@@ -73,6 +73,7 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>3.6.0.Final</version>
+            <!-- old value -->
             <!-- <version>3.3.2.GA</version> -->
         </dependency>
 
@@ -88,8 +89,6 @@
             <artifactId>hibernate-commons-annotations</artifactId>
             <version>3.3.0.ga</version>
         </dependency>
-
-
 
         <dependency>
             <groupId>javax.persistence</groupId>
