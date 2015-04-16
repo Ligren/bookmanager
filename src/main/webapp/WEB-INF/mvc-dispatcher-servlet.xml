@@ -9,6 +9,12 @@
 
     <context:component-scan base-package="com.bookmanager.controller"/>
 
+    <!-- To prevent browser's back button on dispalying secured resource after logout -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="cacheSeconds" value="0" />
+    </bean>
+
+
     <mvc:annotation-driven />
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 

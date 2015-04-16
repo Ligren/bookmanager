@@ -12,6 +12,8 @@
 
        <import resource="security-config.xml"/>
 
+
+
        <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
               <property name="sessionFactory" ref="sessionFactory"/>
        </bean>
@@ -27,6 +29,8 @@
               <property name="dataSource" ref="dataSource"/>
               <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
               <property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration"/>
+              <!-- Not work -->
+              <!--<property name="configurationClass" value="org.hibernate.cfg.Configuration"/> -->
               <property name="hibernateProperties">
                      <props>
                             <prop key="hibernate.show_sql">
@@ -42,15 +46,7 @@
               </property>
        </bean>
 
-       <bean class = "org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-              <property name="messageConverters">
-                     <array>
-                            <bean class = "org.springframework.http.converter.StringHttpMessageConverter">
-                                   <property name="supportedMediaTypes" value = "text/plain;charset=UTF-8" />
-                            </bean>
-                     </array>
-              </property>
-       </bean>
+
 
 
 </beans>
